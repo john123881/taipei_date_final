@@ -8,52 +8,14 @@
     background-color: black;
 }
 
-.navbarLogo {
-    font-size: 36px;
-    display: flex;
-    font-family: "Bungee Outline";
-
+.acContainer{
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    margin: 0 150px;
 }
-.navbarLogo div:first-child {
-    margin-right: 15px;
+.acSidebar{
+    border: #fff 1px solid;
 }
-.navbarLogoLeft{
-  color:#A0FF1F;
-  text-align: center;
-  text-shadow: -16px -8px 7.9px rgba(255, 12, 216, 0.53);
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: var(--h-color, #FF03FF);
-  font-weight: 400;
-  line-height: normal;
-} 
-.navbarLogoRight{
-  color:#ff03ff;
-  text-shadow: 11px 6px 13.1px rgba(183, 255, 65, 0.50);
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: var(--p-color, #a0ff1f);
-  font-weight: 400;
-  line-height: normal;
-}
-
-.navbar .middleListItem {
-    display: flex;
-    flex-direction: row;
-}
-.navbar .middleListItem li {
-    list-style-type: none;
-    font-size: 15px;
-    padding-right: 56px;
-}
-
-.rightListItem {
-    display: flex;
-    flex-direction: row;
-}
-.rightListItem li {
-    list-style-type: none;
-    font-size: 26px;
-    padding-right: 30px;
-}
-.rightListItem li:last-child {
-    padding-right: 0;
+.acRightContainer{
+    border: #fff 1px solid;
 }
