@@ -1,8 +1,6 @@
-const {nextui} = require("@nextui-org/react");
-
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
     content: [
@@ -12,19 +10,25 @@ module.exports = {
 
         // Or if using `src` directory:
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
-        "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        colors:{
-            neongreen:'#A0FF1F',
-            neonpink:'#ff03ff'
+        colors: {
+            neongreen: "#A0FF1F",
+            neonpink: "#ff03ff",
+            light: "#fff",
+        },
+        boxShadow: {
+            xl3: "0 0 13.6px 10px rgba(160, 255, 31, 0.58)",
         },
         extend: {
-            colors:{
-                primary: '#A0FF1F', // 自定义的主要颜色
-                secondary:'#ff03ff',
-                dark:'#000',
-              },
+            colors: {
+                primary: "#A0FF1F", // 自定义的主要颜色
+                secondary: "#ff03ff",
+                dark: "#000",
+            },
+            // boxShadow: {
+            //     xl3: "0 0 13.6px 10px rgba(160, 255, 31, 0.58)",
+            // },
             // fontFamily:{
             //     sans: ['Graphik', 'sans-serif'],
             //     serif: ['Merriweather', 'serif'],
@@ -32,5 +36,5 @@ module.exports = {
         },
     },
     darkMode: "class",
-    plugins: [nextui()],
+    plugins: [require("daisyui")],
 };

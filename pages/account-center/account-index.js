@@ -1,14 +1,11 @@
 import React, { Fragment, useState, useEffect } from "react";
-// import styles from "@/styles/ac-index.module.css";
-import Link from "next/link";
-import Header from "@/components/account-center/header";
+// import Link from "next/link";
+
 
 export default function AccountIndex() {
     return (
-        <Fragment>
-
-                <Header></Header>
-
-        </Fragment>
+        <>
+            <div className="min-h-screen bg-dark">123</div>
+        </>
     );
 }
