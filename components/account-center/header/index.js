@@ -50,7 +50,7 @@ export default function Header() {
                     {/* <NavbarContent className="sm:hidden" justify="start">
                     <NavbarMenuToggle />
                 </NavbarContent> */}
-                    <NavbarContent className=" pr-3" justify="start">
+                    <NavbarContent className="pr-3 " justify="start">
                         <NavbarBrand>
                             <Link href="/">
                                 <Logo />
@@ -60,7 +60,7 @@ export default function Header() {
                     </NavbarContent>
 
                     <NavbarContent
-                        className="hidden sm:flex gap-4"
+                        className="hidden gap-4 sm:flex"
                         justify="center"
                     >
                         {/* <NavbarBrand>
@@ -68,27 +68,27 @@ export default function Header() {
                         <p className="font-bold text-inherit">ACME</p>
                     </NavbarBrand> */}
                         <NavbarItem  className="text-center" isActive>
-                            <Link className="text-neongreen sm:pr-1 text-sm lg:pr-4 text-base" href="#">
+                            <Link className="text-sm text-base text-neongreen sm:pr-1 lg:pr-4" href="#">
                                 配對交友
                             </Link>
                         </NavbarItem>
                         <NavbarItem>
-                            <Link className=" text-white sm:pr-1 text-sm lg:pr-4 text-base" href="#">
+                            <Link className="text-sm text-base text-white sm:pr-1 lg:pr-4" href="#">
                                 社群媒體
                             </Link>
                         </NavbarItem>
                         <NavbarItem>
-                            <Link className=" text-white sm:pr-1 text-sm lg:pr-4 text-base" href="#">
+                            <Link className="text-sm text-base text-white sm:pr-1 lg:pr-4" href="#">
                                 行程規劃
                             </Link>
                         </NavbarItem>
                         <NavbarItem>
-                            <Link className=" text-white sm:pr-1 text-sm lg:pr-4 text-base" href="#">
+                            <Link className="text-sm text-base text-white sm:pr-1 lg:pr-4" href="#">
                                 酒吧探索
                             </Link>
                         </NavbarItem>
                         <NavbarItem>
-                            <Link className=" text-white sm:pr-1 text-sm lg:pr-4 text-base" href="#">
+                            <Link className="text-sm text-base text-white sm:pr-1 lg:pr-4" href="#">
                                 電影探索
                             </Link>
                         </NavbarItem>
@@ -97,7 +97,7 @@ export default function Header() {
                     <NavbarContent justify="end">
                         <NavbarItem className={login ? "hidden" : "block"}>
                         <Button
-                                className="bg-primary text-dark border-dark border-1 font-bold"
+                                className="font-bold bg-primary text-dark border-dark border-1"
                                 as={Link}
 
                                 href="#"
@@ -108,7 +108,7 @@ export default function Header() {
                         </NavbarItem>
                         <NavbarItem className={login ? "hidden" : "block"}>
                             <Button
-                                className="bg-dark text-primary border-primary border-1 font-bold"
+                                className="font-bold bg-dark text-primary border-primary border-1"
                                 as={Link}
                                 
                                 href="#"
@@ -134,12 +134,12 @@ export default function Header() {
                             </Link>
                         </NavbarItem>
                         <NavbarItem  className={login ? "block hidden lg:flex hover:block" : "hidden"}>
-                            <Dropdown placement="bottom-end" className="bg-dark border-white border-1 text-default">
+                            <Dropdown placement="bottom-end" className="border-white bg-dark border-1 text-default">
                                 <DropdownTrigger>
                                     <Avatar
                                         isBordered
                                         as="button"
-                                        className="transition-transform text-3xl"
+                                        className="text-3xl transition-transform"
                                         color="primary"
                                         name="Jason Hughes"
                                         size="sm"
@@ -153,7 +153,7 @@ export default function Header() {
                                 >
                                     <DropdownItem
                                         key="profile"
-                                        className="h-14 gap-2"
+                                        className="gap-2 h-14"
                                     >
                                         <p className="font-semibold">
                                             Signed in as
