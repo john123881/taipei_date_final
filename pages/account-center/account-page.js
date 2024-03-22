@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import Sidebar from "@/components/account-center/sidebar";
+import Sidebar from "@/components/account-center/sidebar/sidebar";
 import Link from "next/link";
 import { BsList } from "react-icons/bs";
 

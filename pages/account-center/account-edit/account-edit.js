@@ -4,9 +4,8 @@ import Link from "next/link";
 import { BsList, BsEmojiHeartEyes } from "react-icons/bs";
 import PageTitle from "@/components/page-title";
 
-
-export default function AccountIndex() {
-    const [pageTitle, setPageTitle] =useState('會員中心') 
+export default function AccountEdit() {
+    const [pageTitle, setPageTitle] = useState("會員中心");
     const missionFinish = true;
     // const missionFinish = false
     return (
@@ -29,7 +28,7 @@ export default function AccountIndex() {
                                 </label>
                             </div>
                             <div className="text-2xl text-light ms-3">
-                                個人資料
+                            資料編輯
                             </div>
                         </div>
                         {/* 小漢堡END */}
@@ -44,7 +43,7 @@ export default function AccountIndex() {
                                         會員中心
                                     </Link>
                                 </li>
-                                <li>個人資料</li>
+                                <li>資料編輯</li>
                             </ul>
                         </div>
 

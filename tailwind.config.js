@@ -19,6 +19,7 @@ module.exports = {
         },
         boxShadow: {
             xl3: "0 0 13.6px 10px rgba(160, 255, 31, 0.58)",
+            xl4: "0 0 28px 8px rgba(255, 3, 255, 1)",
         },
         extend: {
             colors: {

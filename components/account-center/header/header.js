@@ -155,8 +155,8 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <div className="z-50 bg-dark btm-nav btm-nav-sm md:hidden">
-                <button className="hover:active ">
+            <div className="z-50 h-20 bg-dark btm-nav btm-nav-sm md:hidden">
+                <button className="active ">
                     <Link
                         className="text-xs text-light sm:px-0.5 lg:px-8 "
                         href="#"
