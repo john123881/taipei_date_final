@@ -6,8 +6,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body >
-      <Header className="min-h-screen"/>
+      <body  className="min-h-screen">
+      <Header/>
         <Main />
         <NextScript />
       </body>

@@ -10,7 +10,7 @@ export default function Header() {
     // const login = false;
     return (
         <>
-            <div className="sticky top-0 z-50 border-b navbar bg-dark">
+            <div className="sticky top-0 z-50 navbar bg-dark">
                 <div className="navbar-start">
                     <Link href="/">
                         <Logo />
@@ -33,7 +33,7 @@ export default function Header() {
                         </li> */}
                         <li>
                             <Link
-                                className="text-base sm:text-sm text-light hover:shadow-xl3 hover:text-neongreen sm:pr-1 lg:pr-4 btnsd"
+                                className="text-base sm:text-sm text-light hover:shadow-xl3 hover:text-neongreen sm:px-1 md:px-4 lg:px-8"
                                 href="/account-center/account-index"
                             >
                                 配對交友
@@ -41,7 +41,7 @@ export default function Header() {
                         </li>
                         <li>
                             <Link
-                                className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:pr-1 lg:pr-4"
+                                className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:px-1 md:px-4 lg:px-8"
                                 href="#"
                             >
                                 社群媒體
@@ -49,7 +49,7 @@ export default function Header() {
                         </li>
                         <li>
                             <Link
-                                className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:pr-1 lg:pr-4"
+                                className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:px-1 md:px-4 lg:px-8"
                                 href="#"
                             >
                                 行程規劃
@@ -57,7 +57,7 @@ export default function Header() {
                         </li>
                         <li>
                             <Link
-                                className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:pr-1 lg:pr-4"
+                                className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:px-1 md:px-4 lg:px-8"
                                 href="#"
                             >
                                 酒吧探索
@@ -65,7 +65,7 @@ export default function Header() {
                         </li>
                         <li>
                             <Link
-                                className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:pr-1 lg:pr-4"
+                                className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:px-1 md:px-4 lg:px-8"
                                 href="#"
                             >
                                 電影探索
@@ -143,7 +143,7 @@ export default function Header() {
                                 </a>
                             </li> */}
                             <li>
-                                <a>會員中心</a>
+                                <Link href="/account-center/account-index">會員中心</Link>
                             </li>
                             <li>
                                 <a>玩遊戲</a>
@@ -155,42 +155,42 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <div className="btm-nav btm-nav-sm md:hidden">
-                <button>
+            <div className="z-50 bg-dark btm-nav btm-nav-sm md:hidden">
+                <button className="hover:active ">
                     <Link
-                        className="text-base sm:text-sm text-light hover:shadow-xl3 hover:text-neongreen sm:pr-1 lg:pr-4 btnsd"
-                        href="/account-center/account-index"
+                        className="text-xs text-light sm:px-0.5 lg:px-8 "
+                        href="#"
                     >
                         配對交友
                     </Link>
                 </button>
-                <button className="active">
+                <button className="hover:active ">
                     <Link
-                        className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:pr-1 lg:pr-4"
+                        className="text-xs text-light sm:px-0.5 lg:px-8"
                         href="#"
                     >
                         社群媒體
                     </Link>
                 </button>
-                <button>
+                <button className="hover:active ">
                     <Link
-                        className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:pr-1 lg:pr-4"
+                        className="text-xs text-light sm:px-0.5 lg:px-8"
                         href="#"
                     >
                         行程規劃
                     </Link>
                 </button>
-                <button>
+                <button className="hover:active ">
                     <Link
-                        className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:pr-1 lg:pr-4"
+                        className="text-xs text-light sm:px-0.5 lg:px-8"
                         href="#"
                     >
                         酒吧探索
                     </Link>
                 </button>
-                <button>
+                <button className="hover:active ">
                     <Link
-                        className="text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:pr-1 lg:pr-4"
+                        className="text-xs text-light sm:px-0.5 lg:px-8"
                         href="#"
                     >
                         電影探索
