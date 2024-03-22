@@ -34,7 +34,7 @@ export default function Header() {
                         <li>
                             <Link
                                 className="text-base sm:text-sm text-light hover:shadow-xl3 hover:text-neongreen sm:px-1 md:px-4 lg:px-8"
-                                href="/account-center/account-index"
+                                href="#"
                             >
                                 配對交友
                             </Link>

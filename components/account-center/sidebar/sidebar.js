@@ -31,13 +31,13 @@ export default function Sidebar() {
                             <p className="text-2xl text-light">會員中心</p>
                         </li>
                         <li className="hover:text-neongreen">
-                            <Link className="text-base" href="/">
+                            <Link className="text-base" href="/account-center/account-index">
                                 <BsFillPersonFill />
                                 個人資料
                             </Link>
                         </li>
                         <li className="hover:text-neongreen">
-                            <Link className="text-base" href="/">
+                            <Link className="text-base" href="/account-center/account-edit">
                                 <BsCreditCard2FrontFill />
                                 資料編輯
                             </Link>

@@ -1,12 +1,14 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Sidebar from "@/components/account-center/sidebar/sidebar";
 import Link from "next/link";
-import { BsList, BsEmojiHeartEyes } from "react-icons/bs";
+import {BsEmojiHeartEyes } from "react-icons/bs";
 import PageTitle from "@/components/page-title";
-
+import Breadcrumbs from "@/components/account-center/breadcrumbs/breadcrumbs";
+import Burgermenu from "@/components/account-center/burgermenu/burgermenu";
 
 export default function AccountIndex() {
-    const [pageTitle, setPageTitle] =useState('會員中心') 
+    const [pageTitle, setPageTitle] = useState("會員中心");
+    const [currentPage, setCurrentPage] = useState("個人資料");
     const missionFinish = true;
     // const missionFinish = false
     return (
@@ -18,34 +20,17 @@ export default function AccountIndex() {
                 </div>
                 <div class="w-screen px-4 sm:px-6 md:px-8 lg:ps-14 lg:pe-44 xl:pe-60 py-12">
                     <div className="flex flex-col w-full ">
-                        {/* 小漢堡START */}
                         <div className="flex align-middle border-b border-solid menu-title ps-0">
-                            <div className="flex items-center drawer-content sm:hidden">
-                                <label
-                                    htmlFor="my-drawer-2"
-                                    className="drawer-button lg:hidden"
-                                >
-                                    <BsList className="text-2xl" />
-                                </label>
-                            </div>
+                            {/* 小漢堡START */}
+                            <Burgermenu />
+                            {/* 小漢堡END */}
                             <div className="text-2xl text-light ms-3">
-                                個人資料
+                                {currentPage}
                             </div>
                         </div>
-                        {/* 小漢堡END */}
 
                         <div className="text-sm breadcrumbs ms-2">
-                            <ul>
-                                <li>
-                                    <Link href="/">首頁</Link>
-                                </li>
-                                <li>
-                                    <Link href="/account-center/account-index">
-                                        會員中心
-                                    </Link>
-                                </li>
-                                <li>個人資料</li>
-                            </ul>
+                            <Breadcrumbs currentPage={currentPage} />
                         </div>
 
                         {/* CONTENT1 START */}
