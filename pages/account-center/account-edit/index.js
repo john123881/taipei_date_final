@@ -133,7 +133,7 @@ export default function AccountPasswordChange({ onPageChange }) {
                       type="date"
                       value={userBirthday}
                       onChange={handleUserBirthdayChange}
-                      className="max-w-xs min-w-[177px] basis-1/2 sm:basis-1/2 lg:basis-2/3 input-sm input input-bordered"
+                      className="max-w-xs min-w-[202px] basis-1/2 sm:basis-1/2 lg:basis-2/3 input-sm input input-bordered"
                     />
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function AccountPasswordChange({ onPageChange }) {
 
               {/* CONTENT2 START */}
               <div className="flex flex-col justify-start h-full mb-20 lg:mx-1 xl:mx-1 2xl:mx-12 bg-base-300 rounded-box">
-                <div className="mt-4 text-xl ms-2 text-light menu-title">
+                <div className=" text-xl ms-2 text-light menu-title">
                   關於我：
                 </div>
                 <div className="flex flex-col justify-center mx-4 mx-12 mt-4 mb-8 md: 2xl:mx-16">

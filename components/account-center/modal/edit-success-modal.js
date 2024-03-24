@@ -10,7 +10,7 @@ export default function EditSuccessModal() {
         className="modal-toggle"
       />
       <div className=" modal modal-bottom sm:modal-middle">
-        <div className="flex justify-center modal-box w-[95%] mx-4 h-[365px] flex flex-col sm:w-[564px]">
+        <div className="flex justify-center modal-box w-[98%] me-1 h-[365px] flex flex-col sm:w-[564px]">
           <p
             className={`flex justify-center font-bold ${
               result ? 'text-primary' : 'text-secondary'
