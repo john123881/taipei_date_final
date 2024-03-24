@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Feed from '@/components/feed/feed';
 import Recbar from '@/components/recbar/recbar';
 import Sidebar from '@/components/sidebar/sidebar';
