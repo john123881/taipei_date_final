@@ -4,7 +4,7 @@ import Link from "next/link";
 import {BsEmojiHeartEyes } from "react-icons/bs";
 import PageTitle from "@/components/page-title";
 import Breadcrumbs from "@/components/account-center/breadcrumbs/breadcrumbs";
-import Burgermenu from "@/components/account-center/burgermenu/burgermenu";
+import BurgerMenu from "@/components/account-center/burgermenu/burger-menu";
 
 export default function AccountIndex() {
     const [pageTitle, setPageTitle] = useState("會員中心");
@@ -22,7 +22,7 @@ export default function AccountIndex() {
                     <div className="flex flex-col w-full ">
                         <div className="flex align-middle border-b border-solid menu-title ps-0">
                             {/* 小漢堡START */}
-                            <Burgermenu />
+                            <BurgerMenu />
                             {/* 小漢堡END */}
                             <div className="text-2xl text-light ms-3">
                                 {currentPage}
@@ -51,7 +51,7 @@ export default function AccountIndex() {
                                 </div>
                                 <div className="flex flex-row justify-center mx-4 mb-7">
                                     <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
-                                        使用者名稱：
+                                        暱稱：
                                     </p>
                                     <span className="basis-1/2 lg:basis-2/3">
                                         小明

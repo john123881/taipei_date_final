@@ -1,7 +1,7 @@
 import React from "react";
 import { BsList } from "react-icons/bs";
 
-export default function Burgermenu() {
+export default function BurgerMenu() {
     return (
         <>
             <div className="flex items-center drawer-content sm:hidden">

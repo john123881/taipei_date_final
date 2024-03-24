@@ -13,9 +13,17 @@ module.exports = {
     ],
     theme: {
         colors: {
+            transparent: 'transparent',
             neongreen: "#A0FF1F",
             neonpink: "#ff03ff",
             light: "#fff",
+            purple: '#3f3cbb',
+            midnight: '#121063',
+            metal: '#565584',
+            tahiti: '#3ab7bf',
+            silver: '#ecebff',
+            bubblegum: '#ff77e9',
+            bermuda: '#78dcca',
         },
         boxShadow: {
             xl3: "0 0 13.6px 10px rgba(160, 255, 31, 0.58)",
@@ -27,6 +35,9 @@ module.exports = {
                 secondary: "#ff03ff",
                 dark: "#000",
             },
+            btn:{
+                primary: "#A0FF1F",
+            }
             // boxShadow: {
             //     xl3: "0 0 13.6px 10px rgba(160, 255, 31, 0.58)",
             // },
