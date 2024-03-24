@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { Fragment, useState, useEffect } from "react";
 import Sidebar from "@/components/account-center/sidebar/sidebar";
 import Link from "next/link";

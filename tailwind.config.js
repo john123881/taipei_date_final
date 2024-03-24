@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require("tailwindcss/colors");
-
 module.exports = {
     content: [
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,19 +10,19 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-        colors: {
-            transparent: 'transparent',
-            neongreen: "#A0FF1F",
-            neonpink: "#ff03ff",
-            light: "#fff",
-            purple: '#3f3cbb',
-            midnight: '#121063',
-            metal: '#565584',
-            tahiti: '#3ab7bf',
-            silver: '#ecebff',
-            bubblegum: '#ff77e9',
-            bermuda: '#78dcca',
-        },
+            colors: {
+                transparent: 'transparent',
+                neongreen: "#A0FF1F",
+                neonpink: "#ff03ff",
+                light: "#fff",
+                purple: '#3f3cbb',
+                midnight: '#121063',
+                metal: '#565584',
+                tahiti: '#3ab7bf',
+                silver: '#ecebff',
+                bubblegum: '#ff77e9',
+                bermuda: '#78dcca',
+            },
         boxShadow: {
             xl3: "0 0 13.6px 10px rgba(160, 255, 31, 0.58)",
             xl4: "0 0 28px 8px rgba(255, 3, 255, 1)",
