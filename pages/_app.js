@@ -1,16 +1,18 @@
-import "@/styles/globals.css";
-import * as React from "react";
-import Head from "next/head";
-
-import Header from "@/components/account-center/header/header";
+import Footer from '@/components/footer/footer';
+import Navbar from '@/components/navbar/navbar';
+import '@/styles/globals.css';
+import { useState } from 'react';
 
 export default function App({ Component, pageProps }) {
-    // 2. Wrap NextUIProvider at the root of your app
-    return (
-        <main className="dark text-foreground bg-background ">
-
-            <Header />
-            <Component {...pageProps} />
-        </main>
-    );
+  const [currentPageTitle, setCurrentPageTitle] = useState('');
+  const handlePageChange = (pageTitle) => {
+    setCurrentPageTitle(pageTitle);
+  };
+  return (
+    <>
+      <Navbar currentPageTitle={currentPageTitle} />
+      <Component {...pageProps} onPageChange={handlePageChange} />
+      <Footer />
+    </>
+  );
 }
