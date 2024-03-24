@@ -45,7 +45,7 @@ export default function AccountPasswordChange({ onPageChange }) {
                   {currentPage}
                 </div>
                 <span className="text-[10px] max-h-[32px] sm:text-[12px] text-secondary font-thin ml-2">
-                  至少 8 個字元，需包含英文、數字及特殊符號。
+                  輸入8-16 個字元，需包含英文、數字及特殊符號。
                 </span>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function AccountPasswordChange({ onPageChange }) {
               {/* CONTENT1 START */}
               <div className="flex flex-col h-full lg:mx-1 xl:mx-1 2xl:mx-12 lg:flex-row card bg-base-300 rounded-box place-items-center">
                 <div className="container">
-                  <div className="flex flex-row items-center justify-center mx-4 lg:justify-start mt-7 me-16">
+                  <div className="flex flex-row items-center justify-center mx-4 me-4 sm:me-16 lg:justify-start mt-7 ">
                     <p className="text-center ms-2 basis-1/2 lg:ms-0 ">
                       舊密碼：
                     </p>
@@ -69,7 +69,7 @@ export default function AccountPasswordChange({ onPageChange }) {
                       className=" basis-1/2 input-sm input input-bordered"
                     />
                   </div>
-                  <div className="flex flex-row items-center justify-center mx-4 lg:justify-start mt-7 me-16">
+                  <div className="flex flex-row items-center justify-center mx-4 lg:justify-start mt-7 me-4 sm:me-16">
                     <p className="text-center ms-2 basis-1/2 lg:ms-0 ">
                       新密碼：
                     </p>
@@ -79,7 +79,7 @@ export default function AccountPasswordChange({ onPageChange }) {
                       className=" basis-1/2 input-sm input input-bordered"
                     />
                   </div>
-                  <div className="flex flex-row items-center justify-center mx-4 lg:justify-start mt-7 me-16">
+                  <div className="flex flex-row items-center justify-center mx-4 lg:justify-start mt-7 me-4 sm:me-16">
                     <p className="text-center ms-2 basis-1/2 lg:ms-0 ">
                       密碼確認：
                     </p>

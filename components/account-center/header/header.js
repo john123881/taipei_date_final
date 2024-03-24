@@ -146,7 +146,7 @@ export default function Header() {
                                 <Link href="/account-center/account-index">會員中心</Link>
                             </li>
                             <li>
-                                <a>玩遊戲</a>
+                                <a >玩遊戲</a>
                             </li>
                             <li>
                                 <a>登出</a>

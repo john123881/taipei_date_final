@@ -104,7 +104,7 @@ export default function AccountIndex({ onPageChange }) {
                       10 積分
                     </p>
                     <BsEmojiHeartEyes
-                      className={`text-9xl text-secondary ${
+                      className={`text-9xl text-secondary animate-pulse ${
                         missionFinish ? 'block' : 'hidden'
                       }`}
                     />
@@ -155,7 +155,7 @@ export default function AccountIndex({ onPageChange }) {
                 <textarea
                   placeholder=""
                   readOnly
-                  className="w-full h-48 max-w-4xl textarea textarea-bordered textarea-lg text-slate-900"
+                  className="w-full h-48 max-w-4xl textarea textarea-bordered textarea-lg text-slate-400"
                 >
                   你好，我是小明，平常我喜歡去酒吧放鬆，有空也喜歡去看電影，很高興認識妳！
                 </textarea>

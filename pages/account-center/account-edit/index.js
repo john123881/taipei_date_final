@@ -81,7 +81,7 @@ export default function AccountPasswordChange({ onPageChange }) {
 
                 <div className="container basis-1/2">
                   <div className="flex flex-row items-center justify-center mx-4 lg:justify-start my-7">
-                    <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
+                    <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3 ">
                       電子郵件：
                     </p>
                     <input
@@ -89,7 +89,7 @@ export default function AccountPasswordChange({ onPageChange }) {
                       placeholder="Type here"
                       value={'XXX@gamil.com'}
                       readOnly
-                      className="max-w-xs basis-1/2 lg:basis-2/3 input-sm input input-bordered"
+                      className="max-w-xs basis-1/2 lg:basis-2/3 input-sm input input-bordered text-slate-700"
                     />
                   </div>
                   <div className="flex flex-row items-center justify-center mx-4 lg:justify-start mb-7">
@@ -133,7 +133,7 @@ export default function AccountPasswordChange({ onPageChange }) {
                       type="date"
                       value={userBirthday}
                       onChange={handleUserBirthdayChange}
-                      className="max-w-xs min-w-[202px] basis-1/2 sm:basis-1/2 lg:basis-2/3 input-sm input input-bordered"
+                      className="max-w-xs min-w-[202px] sm:min-w-[150px] lg:min-w-[180px] basis-1/2 sm:basis-1/2 lg:basis-2/3 input-sm input input-bordered"
                     />
                   </div>
                 </div>
@@ -144,13 +144,13 @@ export default function AccountPasswordChange({ onPageChange }) {
 
               {/* CONTENT2 START */}
               <div className="flex flex-col justify-start h-full mb-20 lg:mx-1 xl:mx-1 2xl:mx-12 bg-base-300 rounded-box">
-                <div className=" text-xl ms-2 text-light menu-title">
+                <div className="text-xl ms-2 text-light menu-title">
                   關於我：
                 </div>
                 <div className="flex flex-col justify-center mx-4 mx-12 mt-4 mb-8 md: 2xl:mx-16">
                   <textarea
                     placeholder="輸入些甚麼..."
-                    className="w-full h-48 textarea textarea-bordered textarea-lg text-slate-900"
+                    className="w-full h-48 textarea textarea-bordered textarea-lg text-light"
                   >
                     你好，我是小明，平常我喜歡去酒吧放鬆，有空也喜歡去看電影，很高興認識妳！
                   </textarea>

@@ -47,15 +47,18 @@ export default function Sidebar() {
               </Link>
             </li>
             <li className="hover:text-neongreen">
-              <Link className="text-base" href="/">
+              <Link
+                className="text-base"
+                href="/account-center/account-play-game"
+              >
                 <BsDpadFill />
                 遊玩遊戲
               </Link>
             </li>
             <li className="hover:text-neongreen">
-              <Link className="text-base" href="/">
+              <Link className="text-base" href="/account-center/account-record">
                 <BsCashCoin />
-                積分查詢
+                紀錄查詢
               </Link>
             </li>
             <li className="hover:text-neongreen">

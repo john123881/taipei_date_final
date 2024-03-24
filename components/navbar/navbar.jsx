@@ -190,7 +190,7 @@ export default function Header({ currentPageTitle }) {
                 <a href="/account-center/account-index">會員中心</a>
               </li>
               <li>
-                <a>玩遊戲</a>
+                <a href="/account-center/account-play-game">玩遊戲</a>
               </li>
               <li>
                 <a>登出</a>
