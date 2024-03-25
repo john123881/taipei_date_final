@@ -10,11 +10,21 @@ import {
 import { BiSolidDrink } from 'react-icons/bi';
 import { FiCalendar } from 'react-icons/fi';
 import { Logo } from './logo';
+import { useRouter } from 'next/router';
 
 export default function Header({ currentPageTitle }) {
   const login = true;
   console.log(currentPageTitle);
   // const login = false;
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const router = useRouter();
+
+  const handleLinkClick = () => {
+    // 在點擊LINK時設置狀態以收回.dropdown-content
+    setIsDropdownOpen(false);
+    // 在這裡處理LINK的跳轉
+    router.push('/account-center/account-index');
+  };
   return (
     <>
       <div className="sticky top-0 z-50 navbar bg-dark">
@@ -27,8 +37,12 @@ export default function Header({ currentPageTitle }) {
           <ul className="px-0 menu menu-horizontal">
             <li>
               <a
-                className="text-base sm:text-sm text-light hover:shadow-xl3 hover:text-neongreen sm:px-1 md:px-4 lg:px-8"
-                href="/account-center/account-index"
+                className="text-base sm:text-sm text-light hover:shadow-xl3 hover:text-neongreen sm:px-1 md:px-4 lg:px-8 {
+                  currentPageTitle === '配對交友'
+                    ? 'shadow-xl3 text-primary'
+                    : ''
+                }`"
+                href="/date"
               >
                 配對交友
               </a>
@@ -187,7 +201,7 @@ export default function Header({ currentPageTitle }) {
                                 </a>
                             </li> */}
               <li>
-                <a href="/account-center/account-index">會員中心</a>
+                <a onClick={handleLinkClick}>會員中心</a>
               </li>
               <li>
                 <a href="/account-center/account-play-game">玩遊戲</a>
