@@ -215,9 +215,9 @@ export default function Header({ currentPageTitle }) {
       </div>
 
       {/* bottom navbar for mobile */}
-      <div className="z-50 h-16 bg-dark btm-nav btm-nav-sm md:hidden">
+      <div className="z-50 h-20 bg-dark btm-nav btm-nav-sm md:hidden">
         <button
-          className={`hover:active text-primary${
+          className={`hover:active text-primary ${
             currentPageTitle === '配對交友' ? 'active text-primary' : ''
           }`}
         >
@@ -225,10 +225,10 @@ export default function Header({ currentPageTitle }) {
             className={`text-xs ${
               currentPageTitle === '配對交友' ? 'text-primary' : 'text-light'
             }  sm:px-0.5 lg:px-8 flex flex-col items-center hover:text-primary  hover:active:text-primary`}
-            href="#"
+            href="/date"
           >
-            <BsChatSquareHeart className="mb-1 text-h4" />
-            配對交友
+            <BsChatSquareHeart className=" text-h5" />
+            <span className="text-[9px] ">配對交友</span>
           </a>
         </button>
         <button
@@ -242,8 +242,8 @@ export default function Header({ currentPageTitle }) {
             }  sm:px-0.5 lg:px-8 flex flex-col items-center hover:text-primary`}
             href="/community"
           >
-            <BsGlobe2 className="mb-1 text-h4" />
-            社群媒體
+            <BsGlobe2 className="text-h5" />
+            <span className="text-[9px] ">社群媒體</span>
           </a>
         </button>
         <button
@@ -257,8 +257,8 @@ export default function Header({ currentPageTitle }) {
             }  sm:px-0.5 lg:px-8 flex flex-col items-center hover:text-primary`}
             href="#"
           >
-            <FiCalendar className="mb-1 text-h4" />
-            行程規劃
+            <FiCalendar className="text-h5" />
+            <span className="text-[9px] ">行程規劃</span>
           </a>
         </button>
         <button
@@ -272,8 +272,8 @@ export default function Header({ currentPageTitle }) {
             }  sm:px-0.5 lg:px-8 flex flex-col items-center hover:text-primary`}
             href="#"
           >
-            <BiSolidDrink className="mb-1 text-h4" />
-            酒吧探索
+            <BiSolidDrink className=" text-h5" />
+            <span className="text-[9px] ">酒吧探索</span>
           </a>
         </button>
         <button
@@ -287,8 +287,8 @@ export default function Header({ currentPageTitle }) {
             }  sm:px-0.5 lg:px-8 flex flex-col items-center hover:text-primary`}
             href="#"
           >
-            <BsTicketPerforated className="mb-1 text-h4" />
-            電影探索
+            <BsTicketPerforated className="text-h5" />
+            <span className="text-[9px] ">電影探索</span>
           </a>
         </button>
       </div>
