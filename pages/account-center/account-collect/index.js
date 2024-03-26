@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import Sidebar from '@/components/account-center/sidebar/sidebar';
 import PageTitle from '@/components/page-title';
@@ -13,6 +12,10 @@ export default function AccountCollect({ onPageChange }) {
   useEffect(() => {
     onPageChange(pageTitle);
   }, []);
+  const [radio, setRadio] = useState('option1');
+  const handleOptionChange = (e) => {
+    setRadio(e.target.value);
+  };
 
   return (
     <>
@@ -76,73 +79,47 @@ export default function AccountCollect({ onPageChange }) {
                   role="tab"
                   className="tab"
                   aria-label="貼文"
-                  checked
+                  value="option1"
+                  checked={radio === 'option1'}
+                  onChange={handleOptionChange}
                 />
                 {/* CONTENT1 START */}
                 <div role="tabpanel" className="mt-2 tab-content">
                   <div
-                    className={`mt-4 flex flex-col justify-between w-full  h-[580px]  lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
+                    className={`mt-4 flex flex-col justify-between w-full lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
                   >
-                    <div className="grid grid-cols-3 gap-4">
-                      {/* Card START */}
-                      <div className="shadow-xl card border-primary border w-[270px] h-[480px] bg-base-100">
-                        <figure>
-                          <img
-                            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes"
-                          />
-                        </figure>
-                        <div className="card-body">
-                          <h2 className="card-title">Shoes!</h2>
-                          <p>
-                            If a dog chews shoes whose shoes does he choose?
-                          </p>
-                          <div className="justify-end card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="grid grid-cols-1 gap-2 p-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {/* Card START */}
+                      {Array(5)
+                        .fill(1)
+                        .map((v, i) => {
+                          return <div
+                            key={i}
+                            className="mb-2 border shadow-xl card border-white w-fit h-fit bg-base-100"
+                          >
+                            <figure>
+                              <img
+                                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes"
+                              />
+                            </figure>
+                            <div className="card-body">
+                              <h2 className="card-title">Shoes!</h2>
+                              <p>
+                                If a dog chews shoes whose shoes does he choose?
+                              </p>
+                              <div className="justify-end card-actions">
+                                <button className="btn btn-primary">
+                                  Buy Now
+                                </button>
+                              </div>
+                            </div>
+                          </div>;
+                        })}
                       {/* Card END */}
+
                       {/* Card START */}
-                      <div className="shadow-xl card border-primary border w-[270px] h-[480px] bg-base-100">
-                        <figure>
-                          <img
-                            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes"
-                          />
-                        </figure>
-                        <div className="card-body">
-                          <h2 className="card-title">Shoes!</h2>
-                          <p>
-                            If a dog chews shoes whose shoes does he choose?
-                          </p>
-                          <div className="justify-end card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
-                          </div>
-                        </div>
-                      </div>
-                      {/* Card END */}
-                      {/* Card START */}
-                      <div className="shadow-xl card border-primary border w-[270px] h-[480px] bg-base-100">
-                        <figure>
-                          <img
-                            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes"
-                          />
-                        </figure>
-                        <div className="card-body">
-                          <h2 className="card-title">Shoes!</h2>
-                          <p>
-                            If a dog chews shoes whose shoes does he choose?
-                          </p>
-                          <div className="justify-end card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
-                          </div>
-                        </div>
-                      </div>
-                      {/* Card END */}
-                      {/* Card START */}
-                      <div className="shadow-xl card border-primary border w-[270px] h-[480px] bg-base-100">
+                      <div className="mb-2 border shadow-xl card border-primary w-fit h-fit bg-base-100">
                         <figure>
                           <img
                             src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
@@ -199,7 +176,10 @@ export default function AccountCollect({ onPageChange }) {
                   name="my_tabs_1"
                   role="tab"
                   className="tab"
+                  value="option2"
                   aria-label="酒吧"
+                  checked={radio === 'option2'}
+                  onChange={handleOptionChange}
                 />
                 {/* CONTENT1 START */}
                 <div role="tabpanel" className="mt-2 tab-content">
@@ -254,7 +234,10 @@ export default function AccountCollect({ onPageChange }) {
                   name="my_tabs_1"
                   role="tab"
                   className="tab"
+                  value="option3"
                   aria-label="電影"
+                  checked={radio === 'option3'}
+                  onChange={handleOptionChange}
                 />
                 {/* CONTENT1 START */}
                 <div role="tabpanel" className="mt-2 tab-content">

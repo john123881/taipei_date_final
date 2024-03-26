@@ -7,7 +7,7 @@ import {
   BsChatSquareHeart,
   BsTicketPerforated,
 } from 'react-icons/bs';
-import { BiSolidDrink } from 'react-icons/bi';
+import { BiLink, BiSolidDrink } from 'react-icons/bi';
 import { FiCalendar } from 'react-icons/fi';
 import { Logo } from './logo';
 import { useRouter } from 'next/router';
@@ -29,15 +29,15 @@ export default function Header({ currentPageTitle }) {
     <>
       <div className="sticky top-0 z-50 navbar bg-dark">
         <div className="ml-3 navbar-start">
-          <a href="/">
+          <Link href="/">
             <Logo />
-          </a>
+          </Link>
         </div>
         <div className="hidden navbar-center md:flex">
           <ul className="px-0 menu menu-horizontal">
             <li>
               <a
-                className="text-base sm:text-sm text-light hover:shadow-xl3 hover:text-neongreen sm:px-1 md:px-4 lg:px-8 {
+                className="text-base sm:text-sm text-light hover:shadow-xl3 hover:text-neongreen sm:px-1 md:px-4  lg:px-8 {
                   currentPageTitle === '配對交友'
                     ? 'shadow-xl3 text-primary'
                     : ''
@@ -49,7 +49,7 @@ export default function Header({ currentPageTitle }) {
             </li>
             <li>
               <a
-                className={`text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:px-1 md:px-4 lg:px-8 ${
+                className={`text-base text-light hover:shadow-xl3 hover:text-neongreen sm:text-sm sm:px-1 md:px42 lg:px-8 ${
                   currentPageTitle === '社群媒體'
                     ? 'shadow-xl3 text-primary'
                     : ''

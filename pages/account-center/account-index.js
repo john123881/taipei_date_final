@@ -153,7 +153,6 @@ export default function AccountIndex({ onPageChange }) {
               </div>
               <div className="flex justify-center mx-4 mt-4 mb-8 md:mx-12 2xl:mx-16 md:flex-row">
                 <textarea
-                  placeholder=""
                   readOnly
                   className="w-full h-48 max-w-4xl textarea textarea-bordered textarea-lg text-slate-400"
                 >
