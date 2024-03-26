@@ -4,7 +4,8 @@ import Sidebar from '@/components/account-center/sidebar/sidebar';
 import PageTitle from '@/components/page-title';
 import Breadcrumbs from '@/components/account-center/breadcrumbs/breadcrumbs';
 import BurgerMenu from '@/components/account-center/burgermenu/burger-menu';
-import SidebarMobile from '@/components/sidebar/sidebarMobile';
+import EventCard from '@/components/card/eventCard';
+import { FiSend } from 'react-icons/fi';
 
 export default function AccountCollect({ onPageChange }) {
   const pageTitle = '會員中心';
@@ -39,120 +40,272 @@ export default function AccountCollect({ onPageChange }) {
             </div>
             {/* Breadcrumbs END */}
 
-            {/* SearchBar START */}
-            <div className="flex justify-end mt-4 ps-8 item-center">
-              <select
-                className={`w-full max-w-[150px] min-w-[100px] border-slate-700 select select-bordered select-sm `}
-              >
-                <option disabled selected>
-                  選擇獲得來源
-                </option>
-                <option>登入獲得</option>
-                <option>遊戲獲得</option>
-              </select>
-              <label className="flex items-center max-w-[150px] border-slate-700  w-full min-w-[150px] gap-1 ms-2 input input-bordered input-sm">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  className="w-4 h-4 opacity-70"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <input
-                  type="date"
-                  className="grow input-sm"
-                  placeholder="Search"
-                />
-              </label>
-            </div>
-            {/* SearchBar END */}
-
             {/* TabBar START */}
-            <div role="tablist" className="tabs tabs-bordered">
-              <input
-                type="radio"
-                name="pubTabs"
-                role="tab"
-                className="tab"
-                aria-label="酒吧"
-              />
-              <div role="tabpanel" className="p-10 tab-content">
-                酒吧
-              </div>
+            <div>
+              <div
+                role="tablist"
+                className="grid-cols-3 mt-4 tabs tabs-bordered"
+              >
+                {/* SearchBar START */}
+                <div className="flex justify-end item-center">
+                  <label className="flex items-center max-w-[150px] border-slate-700  w-full min-w-[150px] gap-1 ms-2 input input-bordered input-sm">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      className="w-4 h-4 opacity-70"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <input
+                      type="date"
+                      className="grow input-sm"
+                      placeholder="Search"
+                    />
+                  </label>
+                </div>
+                {/* SearchBar END */}
 
-              <input
-                type="radio"
-                name="movieTabs"
-                role="tab"
-                className="tab"
-                aria-label="電影"
-                checked
-              />
-              <div role="tabpane2" className="p-10 tab-content">
-                電影
-              </div>
+                <input
+                  type="radio"
+                  name="my_tabs_1"
+                  role="tab"
+                  className="tab"
+                  aria-label="貼文"
+                  checked
+                />
+                {/* CONTENT1 START */}
+                <div role="tabpanel" className="mt-2 tab-content">
+                  <div
+                    className={`mt-4 flex flex-col justify-between w-full  h-[580px]  lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
+                  >
+                    <div className="grid grid-cols-3 gap-4">
+                      {/* Card START */}
+                      <div className="shadow-xl card border-primary border w-[270px] h-[480px] bg-base-100">
+                        <figure>
+                          <img
+                            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                            alt="Shoes"
+                          />
+                        </figure>
+                        <div className="card-body">
+                          <h2 className="card-title">Shoes!</h2>
+                          <p>
+                            If a dog chews shoes whose shoes does he choose?
+                          </p>
+                          <div className="justify-end card-actions">
+                            <button className="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Card END */}
+                      {/* Card START */}
+                      <div className="shadow-xl card border-primary border w-[270px] h-[480px] bg-base-100">
+                        <figure>
+                          <img
+                            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                            alt="Shoes"
+                          />
+                        </figure>
+                        <div className="card-body">
+                          <h2 className="card-title">Shoes!</h2>
+                          <p>
+                            If a dog chews shoes whose shoes does he choose?
+                          </p>
+                          <div className="justify-end card-actions">
+                            <button className="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Card END */}
+                      {/* Card START */}
+                      <div className="shadow-xl card border-primary border w-[270px] h-[480px] bg-base-100">
+                        <figure>
+                          <img
+                            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                            alt="Shoes"
+                          />
+                        </figure>
+                        <div className="card-body">
+                          <h2 className="card-title">Shoes!</h2>
+                          <p>
+                            If a dog chews shoes whose shoes does he choose?
+                          </p>
+                          <div className="justify-end card-actions">
+                            <button className="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Card END */}
+                      {/* Card START */}
+                      <div className="shadow-xl card border-primary border w-[270px] h-[480px] bg-base-100">
+                        <figure>
+                          <img
+                            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                            alt="Shoes"
+                          />
+                        </figure>
+                        <div className="card-body">
+                          <h2 className="card-title">Shoes!</h2>
+                          <p>
+                            If a dog chews shoes whose shoes does he choose?
+                          </p>
+                          <div className="justify-end card-actions">
+                            <button className="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Card END */}
 
-              <input
-                type="radio"
-                name="postTabs"
-                role="tab"
-                className="tab"
-                aria-label="貼文"
-              />
-              <div role="tabpane3" className="p-10 tab-content">
-                貼文
+                      {/* <EventCard />
+                      <EventCard />
+                      <EventCard /> */}
+                    </div>
+
+                    <div className="mb-3 join ">
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        «
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        1
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        2
+                      </button>
+                      <button className="join-item btn btn-outline hover:bg-primary btn-xs btn-disabled">
+                        ...
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        99
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        100
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        »
+                      </button>
+                    </div>
+                    {/* <ChangePWSuccessModal /> */}
+                  </div>
+                </div>
+                {/* CONTENT1 END */}
+
+                <input
+                  type="radio"
+                  name="my_tabs_1"
+                  role="tab"
+                  className="tab"
+                  aria-label="酒吧"
+                />
+                {/* CONTENT1 START */}
+                <div role="tabpanel" className="mt-2 tab-content">
+                  <div
+                    className={`mt-4 flex flex-col justify-between w-full  h-[580px]  lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
+                  >
+                    <table className="container table py-4 ">
+                      <thead className="w-full ">
+                        <tr className="border-b border-slate-500 min-h-[52px]">
+                          <th className="text-lg text-center text-light ">
+                            日期1
+                          </th>
+                          <th className="text-lg text-center text-light ">
+                            紅利積分
+                          </th>
+                          <th className="text-lg text-center text-light ">
+                            獲得來源
+                          </th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <div className="mb-3 join ">
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        «
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        1
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        2
+                      </button>
+                      <button className="join-item btn btn-outline hover:bg-primary btn-xs btn-disabled">
+                        ...
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        99
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        100
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        »
+                      </button>
+                    </div>
+                    {/* <ChangePWSuccessModal /> */}
+                  </div>
+                </div>
+                {/* CONTENT1 END */}
+
+                <input
+                  type="radio"
+                  name="my_tabs_1"
+                  role="tab"
+                  className="tab"
+                  aria-label="電影"
+                />
+                {/* CONTENT1 START */}
+                <div role="tabpanel" className="mt-2 tab-content">
+                  <div
+                    className={`mt-4 flex flex-col justify-between w-full  h-[580px]  lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
+                  >
+                    <table className="container table py-4 ">
+                      <thead className="w-full ">
+                        <tr className="border-b border-slate-500 min-h-[52px]">
+                          <th className="text-lg text-center text-light ">
+                            日期1
+                          </th>
+                          <th className="text-lg text-center text-light ">
+                            紅利積分
+                          </th>
+                          <th className="text-lg text-center text-light ">
+                            獲得來源
+                          </th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <div className="mb-3 join ">
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        «
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        1
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        2
+                      </button>
+                      <button className="join-item btn btn-outline hover:bg-primary btn-xs btn-disabled">
+                        ...
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        99
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        100
+                      </button>
+                      <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
+                        »
+                      </button>
+                    </div>
+                    {/* <ChangePWSuccessModal /> */}
+                  </div>
+                </div>
+                {/* CONTENT1 END */}
               </div>
             </div>
             {/* TabBar END */}
-
-            {/* CONTENT1 START */}
-            <div
-              className={`mt-4 flex flex-col justify-between w-full  h-[580px]  lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
-            >
-              <table className="container table py-4 ">
-                <thead className="w-full ">
-                  <tr className="border-b border-slate-500 min-h-[52px]">
-                    <th className="text-lg text-center text-light ">日期</th>
-                    <th className="text-lg text-center text-light ">
-                      紅利積分
-                    </th>
-                    <th className="text-lg text-center text-light ">
-                      獲得來源
-                    </th>
-                  </tr>
-                </thead>
-              </table>
-              <div className="mb-3 join ">
-                <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
-                  «
-                </button>
-                <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
-                  1
-                </button>
-                <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
-                  2
-                </button>
-                <button className="join-item btn btn-outline hover:bg-primary btn-xs btn-disabled">
-                  ...
-                </button>
-                <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
-                  99
-                </button>
-                <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
-                  100
-                </button>
-                <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
-                  »
-                </button>
-              </div>
-              {/* <ChangePWSuccessModal /> */}
-            </div>
-            {/* CONTENT1 END */}
 
             {/* CONTENT2 START */}
 
