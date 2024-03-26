@@ -62,7 +62,10 @@ export default function Sidebar() {
               </Link>
             </li>
             <li className="hover:text-neongreen">
-              <Link className="text-base" href="/">
+              <Link
+                className="text-base"
+                href="/account-center/account-collect"
+              >
                 <BsCollection />
                 個人收藏
               </Link>
