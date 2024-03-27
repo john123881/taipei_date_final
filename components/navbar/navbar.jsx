@@ -11,7 +11,6 @@ import { BiLink, BiSolidDrink } from 'react-icons/bi';
 import { FiCalendar } from 'react-icons/fi';
 import { Logo } from './logo';
 import Image from 'next/image';
-import avatar from '@/public/avatar.jpg';
 
 export default function Header({ currentPageTitle }) {
   const login = true;
@@ -179,7 +178,7 @@ export default function Header({ currentPageTitle }) {
               className="btn btn-ghost btn-circle avatar hover:shadow-xl3"
             >
               <div className="w-6 rounded-full ">
-                <Image
+                <img
                   width={24}
                   height={24}
                   alt="Tailwind CSS Navbar component"
