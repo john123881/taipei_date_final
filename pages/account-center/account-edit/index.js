@@ -185,5 +185,5 @@ export default function AccountPasswordChange({ onPageChange }) {
         </div>
       </div>
     </>
-  );
+    
 }
