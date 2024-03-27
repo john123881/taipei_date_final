@@ -44,16 +44,24 @@ export default function AccountRecord({ onPageChange }) {
             {/* Breadcrumbs END */}
 
             {/* Toggle START */}
-            <label className="grid px-4 mx-auto mt-4 border rounded-full cursor-pointer border-slate-700 bg-base-300 border-rounded place-items-center">
+            <label className="relative grid px-4 mx-auto mt-4 border rounded-full cursor-pointer border-slate-700 bg-base-300 border-rounded place-items-center">
               <span
-                className={`col-start-1 row-start-1 max-w-[145px] min-w-[130px] px-3 py-1 my-1 rounded-full text-center label-text ${
+                className={` absolute left-[16px] h-[22px] w-[130px] rounded-full w-wit bg-primary z-10 ${
                   isChecked
-                    ? 'text-light'
-                    : 'text-dark bg-primary animate-pulse '
+                    ? 'translate-x-[100%] duration-700 ease-in-out'
+                    : ' duration-700 ease-in-out'
                 }`}
+              >
+                {' '}
+              </span>
+              <span
+                className={`${
+                  isChecked ? 'text-light' : 'text-dark'
+                } z-20 col-start-1 row-start-1  relative max-w-[145px] min-w-[130px] px-3 py-1 my-1 rounded-full text-center label-text `}
               >
                 積分查詢
               </span>
+
               <input
                 type="checkbox"
                 id="toggle"
@@ -62,11 +70,10 @@ export default function AccountRecord({ onPageChange }) {
                 className="hidden col-span-2 col-start-1 row-start-1 toggle bg-base-content"
               />
               <span
-                className={`col-start-2 row-start-1 max-w-[145px] min-w-[130px] px-3 py-1 my-1 rounded-full text-center label-text ${
-                  isChecked
-                    ? 'text-dark bg-primary animate-pulse '
-                    : 'text-light'
-                }`}
+                className={`${
+                  isChecked ? 'text-dark' : 'text-light'
+                } z-20 col-start-2 row-start-1 max-w-[145px] min-w-[130px] px-3 py-1 my-1 rounded-full text-center label-text 
+             `}
               >
                 遊戲紀錄
               </span>

@@ -94,7 +94,7 @@ export default function AccountCollect({ onPageChange }) {
                           return (
                             <div
                               key={i}
-                              className="mb-2 border border-white shadow-xl card w-fit h-fit bg-base-100"
+                              className="mb-2 border border-white shadow-xl card w-fit h-[400px] bg-base-100"
                             >
                               <figure>
                                 <img
@@ -163,7 +163,7 @@ export default function AccountCollect({ onPageChange }) {
                 {/* CONTENT1 START */}
                 <div role="tabpanel" className="mt-2 tab-content">
                   <div
-                    className={`mt-4 flex flex-col justify-between w-full lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
+                    className={`mt-4 flex flex-col justify-between  lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
                   >
                     {/* Card START */}
                     <div className="grid grid-cols-1 gap-2 p-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -173,11 +173,12 @@ export default function AccountCollect({ onPageChange }) {
                           return (
                             <div
                               key={i}
-                              className="mb-2 border border-white shadow-xl card w-fit h-fit bg-base-100"
+                              className="mb-2 border border-white shadow-xl card h-[400px] bg-base-100"
                             >
                               <figure>
                                 <img
-                                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                  src="/bar.jpg"
+                                  className="object-contain"
                                   alt="Shoes"
                                 />
                               </figure>
@@ -249,13 +250,10 @@ export default function AccountCollect({ onPageChange }) {
                           return (
                             <div
                               key={i}
-                              className="mb-2 border border-white shadow-xl card w-fit h-fit bg-base-100"
+                              className="mb-2 border border-white shadow-xl card w-fit h-[400px] bg-base-100"
                             >
                               <figure>
-                                <img
-                                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                                  alt="Shoes"
-                                />
+                                <img src="/movie.jpg" alt="Shoes" />
                               </figure>
                               <div className="card-body">
                                 <h2 className="card-title">電影</h2>
@@ -303,7 +301,6 @@ export default function AccountCollect({ onPageChange }) {
               </div>
             </div>
             {/* TabBar END */}
-
           </div>
         </div>
       </div>
