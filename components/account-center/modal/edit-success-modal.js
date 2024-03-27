@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function EditSuccessModal() {
   // const result = true;
   const result = false;
@@ -28,12 +30,12 @@ export default function EditSuccessModal() {
             >
               繼續編輯
             </label>
-            <a
+            <Link
               href="/account-center/account-index"
               className="btn w-1/2 min-h-[25px] h-[32px] btn-sm sm:w-[135px] ml-4 rounded-full btn-outline bg-dark btn-md hover:bg-dark text-primary hover:text-primary hover:shadow-xl3 hover:border-dark "
             >
               返回會員中心
-            </a>
+            </Link>
           </div>
         </div>
 

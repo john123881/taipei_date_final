@@ -26,7 +26,7 @@ export default function AccountRecord({ onPageChange }) {
         </div>
         <div className="w-screen px-4 py-12 sm:px-6 md:px-8 lg:ps-14 lg:pe-44 xl:pe-60">
           <div className="flex flex-col w-full ">
-            {/* 小漢堡START */}
+            {/* 小漢堡 START */}
             <div className="flex border-b border-solid item-center menu-title ps-0">
               <BurgerMenu />
               <div className="flex flex-row items-end">
@@ -35,11 +35,13 @@ export default function AccountRecord({ onPageChange }) {
                 </div>
               </div>
             </div>
-            {/* 小漢堡END */}
+            {/* 小漢堡 END */}
 
+            {/* Breadcrumbs START */}
             <div className="text-sm breadcrumbs ms-2">
               <Breadcrumbs currentPage={currentPage} />
             </div>
+            {/* Breadcrumbs END */}
 
             {/* Toggle START */}
             <label className="grid px-4 mx-auto mt-4 border rounded-full cursor-pointer border-slate-700 bg-base-300 border-rounded place-items-center">
@@ -125,56 +127,20 @@ export default function AccountRecord({ onPageChange }) {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center ">2024/02/20</td>
-                    <td className="text-base text-center ">10</td>
-                    <td className="text-base text-center ">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">10</td>
-                    <td className="text-base text-center">登入獲得</td>
-                  </tr>{' '}
+                  {Array(10)
+                    .fill(1)
+                    .map((v, i) => {
+                      return (
+                        <tr
+                          key={i}
+                          className=" text-slate-400 hover:text-primary"
+                        >
+                          <td className="text-base text-center ">2024/02/20</td>
+                          <td className="text-base text-center ">10</td>
+                          <td className="text-base text-center ">登入獲得</td>
+                        </tr>
+                      );
+                    })}
                 </tbody>
               </table>
               <div className="mb-3 join ">
@@ -200,7 +166,6 @@ export default function AccountRecord({ onPageChange }) {
                   »
                 </button>
               </div>
-              {/* <ChangePWSuccessModal /> */}
             </div>
             {/* CONTENT1 END */}
 
@@ -219,56 +184,20 @@ export default function AccountRecord({ onPageChange }) {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
-                  <tr className=" text-slate-400 hover:text-primary">
-                    <td className="text-base text-center">2024/02/20</td>
-                    <td className="text-base text-center">00011</td>
-                    <td className="text-base text-center">01:55</td>
-                  </tr>
+                  {Array(10)
+                    .fill(1)
+                    .map((v, i) => {
+                      return (
+                        <tr
+                          key={i}
+                          className=" text-slate-400 hover:text-primary"
+                        >
+                          <td className="text-base text-center">2024/02/20</td>
+                          <td className="text-base text-center">00011</td>
+                          <td className="text-base text-center">01:55</td>
+                        </tr>
+                      );
+                    })}
                 </tbody>
               </table>
               <div className="mb-3 join ">
@@ -294,7 +223,6 @@ export default function AccountRecord({ onPageChange }) {
                   »
                 </button>
               </div>
-              {/* <ChangePWSuccessModal /> */}
             </div>
             {/* CONTENT2 END */}
           </div>

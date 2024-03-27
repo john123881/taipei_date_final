@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Sidebar from '@/components/account-center/sidebar/sidebar';
 import { BsEmojiHeartEyes } from 'react-icons/bs';
 import PageTitle from '@/components/page-title';
@@ -9,11 +9,24 @@ import BurgerMenu from '@/components/account-center/burgermenu/burger-menu';
 export default function AccountIndex({ onPageChange }) {
   const pageTitle = '會員中心';
   const currentPage = '個人資料';
+  const [userInf] = useState({
+    email: 'XXX@gamil.com',
+    name: '小美',
+    gender: '女',
+    mobile: '0912345678',
+    birthday: '2000-01-01',
+    fav1: '運動酒吧',
+    fav2: '動作片',
+    point: 320,
+    profile:
+      '你好，我是小明，平常我喜歡去酒吧放鬆，有空也喜歡去看電影，很高興認識妳！',
+    hasLogin: false,
+    hasPlay: false,
+  });
   useEffect(() => {
     onPageChange(pageTitle);
   }, []);
-  const missionFinish = true;
-  // const missionFinish = false
+
   return (
     <>
       <PageTitle pageTitle={pageTitle} />
@@ -46,37 +59,59 @@ export default function AccountIndex({ onPageChange }) {
                   <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
                     電子郵件：
                   </p>
-                  <span className="basis-1/2 lg:basis-2/3">XXX@gamil.com</span>
+                  <span className="basis-1/2 lg:basis-2/3">
+                    {userInf.email}
+                  </span>
                 </div>
                 <div className="flex flex-row justify-center mx-4 mb-7">
                   <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
                     暱稱：
                   </p>
-                  <span className="basis-1/2 lg:basis-2/3">小明</span>
+                  <span className="basis-1/2 lg:basis-2/3">{userInf.name}</span>
                 </div>
                 <div className="flex flex-row justify-center mx-4 lg:justify-start mb-7">
                   <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
                     性別：
                   </p>
-                  <span className="basis-1/2 lg:basis-2/3">男</span>
+                  <span className="basis-1/2 lg:basis-2/3">
+                    {userInf.gender}
+                  </span>
                 </div>
                 <div className="flex flex-row justify-center mx-4 lg:justify-start mb-7">
                   <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
                     手機號碼：
                   </p>
-                  <span className="basis-1/2 lg:basis-2/3">0912345678</span>
+                  <span className="basis-1/2 lg:basis-2/3">
+                    {userInf.mobile}
+                  </span>
                 </div>
                 <div className="flex flex-row justify-center mx-4 lg:justify-start mb-7">
                   <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
                     生日：
                   </p>
-                  <span className="basis-1/2 lg:basis-2/3">2000-01-01</span>
+                  <span className="basis-1/2 lg:basis-2/3">
+                    {userInf.birthday}
+                  </span>
+                </div>
+                <div className="flex flex-row justify-center mx-4 lg:justify-start mb-7">
+                  <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
+                    酒吧喜好：
+                  </p>
+                  <span className="basis-1/2 lg:basis-2/3">{userInf.fav1}</span>
+                </div>
+                <div className="flex flex-row justify-center mx-4 lg:justify-start mb-7">
+                  <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
+                    電影喜好：
+                  </p>
+                  <span className="basis-1/2 lg:basis-2/3">{userInf.fav2}</span>
                 </div>
                 <div className="flex flex-row justify-center mx-4 lg:justify-start mb-7">
                   <p className="text-center ms-2 basis-1/2 lg:ms-0 lg:basis-1/3">
                     積分：
                   </p>
-                  <span className="basis-1/2 lg:basis-2/3">320</span>
+                  <span className="basis-1/2 lg:basis-2/3">
+                    {userInf.point}
+                  </span>
                 </div>
               </div>
             </div>
@@ -93,38 +128,38 @@ export default function AccountIndex({ onPageChange }) {
                 <div className="flex flex-col items-center justify-center mb-4 md:mb-0 basis-1/2">
                   <div
                     className={`flex justify-center mx-4 my-4 rounded-full bg-neutral-700 place-items-center ring ring-primary h-36 w-36  ${
-                      missionFinish ? 'shadow-xl4' : ' '
+                      userInf.hasLogin ? 'shadow-xl4' : ' '
                     }`}
                   >
                     <p
                       className={`text-xl ${
-                        missionFinish ? 'hidden' : 'block'
+                        userInf.hasLogin ? 'hidden' : 'block'
                       }`}
                     >
                       10 積分
                     </p>
                     <BsEmojiHeartEyes
                       className={`text-9xl text-secondary animate-pulse ${
-                        missionFinish ? 'block' : 'hidden'
+                        userInf.hasLogin ? 'block' : 'hidden'
                       }`}
                     />
                   </div>
                   <div
                     className={`text-xl text-center ${
-                      missionFinish ? 'text-light' : ''
+                      userInf.hasLogin ? 'text-light' : ''
                     }`}
                   >
                     每日登入
                     <span
                       className={`text-sm ms-2 ${
-                        missionFinish ? 'hidden' : 'inline-block'
+                        userInf.hasLogin ? 'hidden' : 'inline-block'
                       }`}
                     >
                       未完成
                     </span>
                     <span
                       className={`text-sm text-light ms-2 ${
-                        missionFinish ? 'inline-block' : 'hidden'
+                        userInf.hasLogin ? 'inline-block' : 'hidden'
                       }`}
                     >
                       完成
@@ -132,12 +167,44 @@ export default function AccountIndex({ onPageChange }) {
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center mb-4 md:mb-0 basis-1/2">
-                  <div className="flex justify-center mx-4 my-4 rounded-full bg-neutral-700 place-items-center ring ring-primary h-36 w-36">
-                    <p className="text-xl">10 積分</p>
+                  <div
+                    className={`flex justify-center mx-4 my-4 rounded-full bg-neutral-700 place-items-center ring ring-primary h-36 w-36  ${
+                      userInf.hasPlay ? 'shadow-xl4' : ' '
+                    }`}
+                  >
+                    <p
+                      className={`text-xl ${
+                        userInf.hasPlay ? 'hidden' : 'block'
+                      }`}
+                    >
+                      10 積分
+                    </p>
+                    <BsEmojiHeartEyes
+                      className={`text-9xl text-secondary animate-pulse ${
+                        userInf.hasPlay ? 'block' : 'hidden'
+                      }`}
+                    />
                   </div>
-                  <div className="text-xl text-center">
+                  <div
+                    className={`text-xl text-center ${
+                      userInf.hasPlay ? 'text-light' : ''
+                    }`}
+                  >
                     遊玩遊戲
-                    <span className="text-sm ms-2">未完成</span>
+                    <span
+                      className={`text-sm ms-2 ${
+                        userInf.hasPlay ? 'hidden' : 'inline-block'
+                      }`}
+                    >
+                      未完成
+                    </span>
+                    <span
+                      className={`text-sm text-light ms-2 ${
+                        userInf.hasPlay ? 'inline-block' : 'hidden'
+                      }`}
+                    >
+                      完成
+                    </span>
                   </div>
                 </div>
               </div>
@@ -153,11 +220,10 @@ export default function AccountIndex({ onPageChange }) {
               </div>
               <div className="flex justify-center mx-4 mt-4 mb-8 md:mx-12 2xl:mx-16 md:flex-row">
                 <textarea
+                  value={userInf.profile}
                   readOnly
                   className="w-full h-48 max-w-4xl textarea textarea-bordered textarea-lg text-slate-400"
-                >
-                  你好，我是小明，平常我喜歡去酒吧放鬆，有空也喜歡去看電影，很高興認識妳！
-                </textarea>
+                ></textarea>
               </div>
             </div>
             {/* CONTENT3 END */}

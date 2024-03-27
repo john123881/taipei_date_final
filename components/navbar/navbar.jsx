@@ -10,21 +10,15 @@ import {
 import { BiLink, BiSolidDrink } from 'react-icons/bi';
 import { FiCalendar } from 'react-icons/fi';
 import { Logo } from './logo';
-import { useRouter } from 'next/router';
+import Image from 'next/image';
+import avatar from '@/public/avatar.jpg';
 
 export default function Header({ currentPageTitle }) {
   const login = true;
   console.log(currentPageTitle);
   // const login = false;
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const router = useRouter();
+  const [dropDownOpen, setDropDownOpen] = useState(false);
 
-  const handleLinkClick = () => {
-    // 在點擊LINK時設置狀態以收回.dropdown-content
-    setIsDropdownOpen(false);
-    // 在這裡處理LINK的跳轉
-    router.push('/account-center/account-index');
-  };
   return (
     <>
       <div className="sticky top-0 z-50 navbar bg-dark">
@@ -179,37 +173,49 @@ export default function Header({ currentPageTitle }) {
             className={`dropdown dropdown-end ${login ? ' block' : ' hidden'}`}
           >
             <div
+              onClick={() => setDropDownOpen(!dropDownOpen)}
               tabIndex={0}
               role="button"
               className="btn btn-ghost btn-circle avatar hover:shadow-xl3"
             >
               <div className="w-6 rounded-full ">
-                <img
+                <Image
+                  width={24}
+                  height={24}
                   alt="Tailwind CSS Navbar component"
                   src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  // https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg
                 />
               </div>
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content border-1 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              {/* <li>
-                                <a className="justify-between">
-                                    Profile
-                                    <span className="badge">New</span>
-                                </a>
-                            </li> */}
-              <li>
-                <a onClick={handleLinkClick}>會員中心</a>
-              </li>
-              <li>
-                <a href="/account-center/account-play-game">玩遊戲</a>
-              </li>
-              <li>
-                <a>登出</a>
-              </li>
-            </ul>
+            {dropDownOpen && (
+              <ul
+                tabIndex={0}
+                className="menu ease-in duration-300 menu-sm dropdown-content border-1 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <Link
+                    onClick={() => setDropDownOpen(false)}
+                    href="/account-center/account-index"
+                  >
+                    會員中心
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => setDropDownOpen(false)}
+                    href="/account-center/account-play-game"
+                  >
+                    玩遊戲
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={() => setDropDownOpen(false)} href="/">
+                    登出
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
       </div>
@@ -236,7 +242,7 @@ export default function Header({ currentPageTitle }) {
             currentPageTitle === '社群媒體' ? 'active text-primary' : ''
           }`}
         >
-          <a
+          <Link
             className={`text-xs ${
               currentPageTitle === '社群媒體' ? 'text-primary' : 'text-light'
             }  sm:px-0.5 lg:px-8 flex flex-col items-center hover:text-primary`}
@@ -244,7 +250,7 @@ export default function Header({ currentPageTitle }) {
           >
             <BsGlobe2 className="text-h5" />
             <span className="text-[9px] ">社群媒體</span>
-          </a>
+          </Link>
         </button>
         <button
           className={`hover:active text-primary${

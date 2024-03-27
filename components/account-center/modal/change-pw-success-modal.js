@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function ChangePWSuccessModal() {
   // const result = true;
   const result = false;
@@ -30,12 +32,12 @@ export default function ChangePWSuccessModal() {
             >
               繼續更改
             </label>
-            <a
+            <Link
               href="/account-center/account-index"
               className="btn w-1/2 min-h-[25px] h-[32px] btn-sm sm:w-[140px] rounded-full btn-outline bg-dark btn-md hover:bg-dark text-primary hover:text-primary hover:shadow-xl3 hover:border-dark "
             >
               返回會員中心
-            </a>
+            </Link>
           </div>
         </div>
       </div>

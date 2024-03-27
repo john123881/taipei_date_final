@@ -3,8 +3,6 @@ import Sidebar from '@/components/account-center/sidebar/sidebar';
 import PageTitle from '@/components/page-title';
 import Breadcrumbs from '@/components/account-center/breadcrumbs/breadcrumbs';
 import BurgerMenu from '@/components/account-center/burgermenu/burger-menu';
-import EventCard from '@/components/card/eventCard';
-import { FiSend } from 'react-icons/fi';
 
 export default function AccountCollect({ onPageChange }) {
   const pageTitle = '會員中心';
@@ -89,60 +87,40 @@ export default function AccountCollect({ onPageChange }) {
                     className={`mt-4 flex flex-col justify-between w-full lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
                   >
                     <div className="grid grid-cols-1 gap-2 p-4 sm:grid-cols-2 lg:grid-cols-3">
-                    {/* Card START */}
+                      {/* Card START */}
                       {Array(5)
                         .fill(1)
                         .map((v, i) => {
-                          return <div
-                            key={i}
-                            className="mb-2 border shadow-xl card border-white w-fit h-fit bg-base-100"
-                          >
-                            <figure>
-                              <img
-                                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                                alt="Shoes"
-                              />
-                            </figure>
-                            <div className="card-body">
-                              <h2 className="card-title">Shoes!</h2>
-                              <p>
-                                If a dog chews shoes whose shoes does he choose?
-                              </p>
-                              <div className="justify-end card-actions">
-                                <button className="btn btn-primary">
-                                  Buy Now
-                                </button>
+                          return (
+                            <div
+                              key={i}
+                              className="mb-2 border border-white shadow-xl card w-fit h-fit bg-base-100"
+                            >
+                              <figure>
+                                <img
+                                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                  alt="Shoes"
+                                />
+                              </figure>
+                              <div className="card-body">
+                                <h2 className="card-title">Shoes!</h2>
+                                <p>
+                                  If a dog chews shoes whose shoes does he
+                                  choose?
+                                </p>
+                                <div className="justify-end card-actions">
+                                  <button className="btn btn-primary">
+                                    Buy Now
+                                  </button>
+                                </div>
                               </div>
                             </div>
-                          </div>;
+                          );
                         })}
                       {/* Card END */}
-
-                      {/* Card START */}
-                      <div className="mb-2 border shadow-xl card border-primary w-fit h-fit bg-base-100">
-                        <figure>
-                          <img
-                            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes"
-                          />
-                        </figure>
-                        <div className="card-body">
-                          <h2 className="card-title">Shoes!</h2>
-                          <p>
-                            If a dog chews shoes whose shoes does he choose?
-                          </p>
-                          <div className="justify-end card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
-                          </div>
-                        </div>
-                      </div>
-                      {/* Card END */}
-
-                      {/* <EventCard />
-                      <EventCard />
-                      <EventCard /> */}
                     </div>
 
+                    {/* Pagination START */}
                     <div className="mb-3 join ">
                       <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
                         «
@@ -166,7 +144,7 @@ export default function AccountCollect({ onPageChange }) {
                         »
                       </button>
                     </div>
-                    {/* <ChangePWSuccessModal /> */}
+                    {/* Pagination START */}
                   </div>
                 </div>
                 {/* CONTENT1 END */}
@@ -181,26 +159,44 @@ export default function AccountCollect({ onPageChange }) {
                   checked={radio === 'option2'}
                   onChange={handleOptionChange}
                 />
+
                 {/* CONTENT1 START */}
                 <div role="tabpanel" className="mt-2 tab-content">
                   <div
-                    className={`mt-4 flex flex-col justify-between w-full  h-[580px]  lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
+                    className={`mt-4 flex flex-col justify-between w-full lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
                   >
-                    <table className="container table py-4 ">
-                      <thead className="w-full ">
-                        <tr className="border-b border-slate-500 min-h-[52px]">
-                          <th className="text-lg text-center text-light ">
-                            日期1
-                          </th>
-                          <th className="text-lg text-center text-light ">
-                            紅利積分
-                          </th>
-                          <th className="text-lg text-center text-light ">
-                            獲得來源
-                          </th>
-                        </tr>
-                      </thead>
-                    </table>
+                    {/* Card START */}
+                    <div className="grid grid-cols-1 gap-2 p-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {Array(5)
+                        .fill(1)
+                        .map((v, i) => {
+                          return (
+                            <div
+                              key={i}
+                              className="mb-2 border border-white shadow-xl card w-fit h-fit bg-base-100"
+                            >
+                              <figure>
+                                <img
+                                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                  alt="Shoes"
+                                />
+                              </figure>
+                              <div className="card-body">
+                                <h2 className="card-title">酒吧</h2>
+                                <p>這酒吧好讚</p>
+                                <div className="justify-end card-actions">
+                                  <button className="btn btn-primary">
+                                    看更多
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                    </div>
+                    {/* Card END */}
+
+                    {/* Pagination START */}
                     <div className="mb-3 join ">
                       <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
                         «
@@ -224,7 +220,7 @@ export default function AccountCollect({ onPageChange }) {
                         »
                       </button>
                     </div>
-                    {/* <ChangePWSuccessModal /> */}
+                    {/* Pagination START */}
                   </div>
                 </div>
                 {/* CONTENT1 END */}
@@ -239,26 +235,44 @@ export default function AccountCollect({ onPageChange }) {
                   checked={radio === 'option3'}
                   onChange={handleOptionChange}
                 />
+
                 {/* CONTENT1 START */}
                 <div role="tabpanel" className="mt-2 tab-content">
                   <div
-                    className={`mt-4 flex flex-col justify-between w-full  h-[580px]  lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
+                    className={`mt-4 flex flex-col justify-between w-full lg:mx-1 xl:mx-1 bg-base-300 rounded-box  place-items-center  rounded-3xl`}
                   >
-                    <table className="container table py-4 ">
-                      <thead className="w-full ">
-                        <tr className="border-b border-slate-500 min-h-[52px]">
-                          <th className="text-lg text-center text-light ">
-                            日期1
-                          </th>
-                          <th className="text-lg text-center text-light ">
-                            紅利積分
-                          </th>
-                          <th className="text-lg text-center text-light ">
-                            獲得來源
-                          </th>
-                        </tr>
-                      </thead>
-                    </table>
+                    {/* Card START */}
+                    <div className="grid grid-cols-1 gap-2 p-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {Array(7)
+                        .fill(1)
+                        .map((v, i) => {
+                          return (
+                            <div
+                              key={i}
+                              className="mb-2 border border-white shadow-xl card w-fit h-fit bg-base-100"
+                            >
+                              <figure>
+                                <img
+                                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                  alt="Shoes"
+                                />
+                              </figure>
+                              <div className="card-body">
+                                <h2 className="card-title">電影</h2>
+                                <p>大螢幕94狂</p>
+                                <div className="justify-end card-actions">
+                                  <button className="btn btn-primary">
+                                    看更多
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                    </div>
+                    {/* Card END */}
+
+                    {/* Pagination START */}
                     <div className="mb-3 join ">
                       <button className="join-item btn border-slate-700 hover:bg-primary btn-xs">
                         «
@@ -282,7 +296,7 @@ export default function AccountCollect({ onPageChange }) {
                         »
                       </button>
                     </div>
-                    {/* <ChangePWSuccessModal /> */}
+                    {/* Pagination START */}
                   </div>
                 </div>
                 {/* CONTENT1 END */}
@@ -290,9 +304,6 @@ export default function AccountCollect({ onPageChange }) {
             </div>
             {/* TabBar END */}
 
-            {/* CONTENT2 START */}
-
-            {/* CONTENT2 END */}
           </div>
         </div>
       </div>

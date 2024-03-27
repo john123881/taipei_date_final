@@ -4,12 +4,16 @@ import PageTitle from '@/components/page-title';
 import Breadcrumbs from '@/components/account-center/breadcrumbs/breadcrumbs';
 import BurgerMenu from '@/components/account-center/burgermenu/burger-menu';
 import EditSuccessModal from '@/components/account-center/modal/edit-success-modal';
+import Link from 'next/link';
 
 export default function AccountPasswordChange({ onPageChange }) {
   const [username, setUsername] = useState('小明');
   const [userGender, setUserGender] = useState('男');
   const [userPhone, setUserPhone] = useState('0912345678');
   const [userBirthday, setUserBirthday] = useState('2000-01-01');
+  const [userTextarea, setUserTextarea] = useState(
+    '你好，我是小明，平常我喜歡去酒吧放鬆，有空也喜歡去看電影，很高興認識妳！'
+  );
   const pageTitle = '會員中心';
   const currentPage = '資料編輯';
   useEffect(() => {
@@ -29,6 +33,9 @@ export default function AccountPasswordChange({ onPageChange }) {
   };
   const handleUserBirthdayChange = (e) => {
     setUserBirthday(e.target.value);
+  };
+  const handleUserTextareaChange = (e) => {
+    setUserTextarea(e.target.value);
   };
 
   // const missionFinish = false
@@ -149,11 +156,11 @@ export default function AccountPasswordChange({ onPageChange }) {
                 </div>
                 <div className="flex flex-col justify-center mx-4 mx-12 mt-4 mb-8 md: 2xl:mx-16">
                   <textarea
+                    value={userTextarea}
                     placeholder="輸入些甚麼..."
                     className="w-full h-48 textarea textarea-bordered textarea-lg text-light"
-                  >
-                    你好，我是小明，平常我喜歡去酒吧放鬆，有空也喜歡去看電影，很高興認識妳！
-                  </textarea>
+                    onChange={handleUserTextareaChange}
+                  ></textarea>
                   <div className="flex justify-end mt-[30px]">
                     <label
                       htmlFor="edit_success_modal"
@@ -161,12 +168,12 @@ export default function AccountPasswordChange({ onPageChange }) {
                     >
                       編輯完成
                     </label>
-                    <a
+                    <Link
                       href="/account-center/account-index"
                       className="btn w-1/2 min-h-[40px] h-[40px] sm:w-[140px] sm:ml-4  rounded-full btn btn-outline bg-dark btn-md hover:bg-dark text-primary hover:text-primary hover:shadow-xl3 hover:border-dark"
                     >
                       取消編輯
-                    </a>
+                    </Link>
 
                     <EditSuccessModal />
                   </div>
