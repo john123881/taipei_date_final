@@ -29,7 +29,7 @@ export default function RegisterAcc() {
         </button>
       </div>
       <dialog id="my_modal_3" className="modal ">
-        <div className="w-11/12 max-w-[100%] md:max-w-[68%] lg:max-w-[54%] xl:max-w-[50%] items-center flex modal-box bg-light p-0 rounded-3xl">
+        <div className="w-11/12 max-w-[100%] md:max-w-[68%] lg:max-w-[54%] xl:max-w-[50%] 2xl:max-w-[45%] items-center flex modal-box bg-light p-0 rounded-3xl">
           {/* if there is a button in form, it will close the modal */}
           <form method="dialog ">
             <button className="absolute z-30 btn btn-sm text-dark btn-circle btn-ghost right-2 top-2">
@@ -42,7 +42,7 @@ export default function RegisterAcc() {
               <>
                 {/* LeftSide */}
                 <div
-                  class={`flex flex-col w-full md:w-1/2 my-10 duration-1000  ${
+                  class={`flex flex-col w-full md:w-1/2 my-10 ease-in-out duration-1000  ${
                     loginToggle ? '' : ' translate-x-[100%] '
                   } `}
                 >
@@ -140,7 +140,7 @@ export default function RegisterAcc() {
               <>
                 {/* RightSide */}
                 <div
-                  class={`flex flex-col  w-full md:translate-y-[0%] md:w-1/2 my-10 duration-1000  ${
+                  class={`flex flex-col ease-in-out w-full md:translate-x-[0%] md:w-1/2 my-10 duration-1000  ${
                     loginToggle ? '' : 'translate-x-[0%] md:translate-x-[100%] '
                   } `}
                 >
@@ -255,15 +255,19 @@ export default function RegisterAcc() {
 
             {/* Slider */}
             <div
-              style={{ backgroundImage: 'url(/loginBackground.png)' }}
+              style={
+                loginToggle
+                  ? { backgroundImage: 'url(/loginBackground.png)' }
+                  : { backgroundImage: 'url(/loginBackgroundReverse.png)' }
+              }
               class={`${
                 loginToggle
-                  ? 'py-10 rounded-l-[100px]'
-                  : 'translate-x-[-101%] py-[88px] rounded-r-[100px]'
-              } duration-1000  w-1/2 absolute right-0 h-full bg-cover  items-center p-4 text-center hidden md:block z-20 `}
+                  ? 'py-10 rounded-l-[100px] '
+                  : 'translate-x-[-101%] py-[88px] rounded-r-[100px] '
+              } duration-1000 ease-in-out  w-1/2 absolute right-0 h-full bg-cover  items-center p-4 text-center hidden md:block z-20 `}
             >
               <div className="flex flex-col items-center justify-center ">
-                <div className="font-bold text-h1 text-dark">
+                <div className="font-bold text-h1 text-dark ">
                   {`${loginToggle ? 'Hello, Friend!' : '歡迎回來！  '} `}
                 </div>
                 <div className="px-4 mt-10 font-bold text-h5 text-dark">
