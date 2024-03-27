@@ -154,7 +154,7 @@ export default function AccountPasswordChange({ onPageChange }) {
                 <div className="text-xl ms-2 text-light menu-title">
                   關於我：
                 </div>
-                <div className="flex flex-col justify-center mx-4 mx-12 mt-4 mb-8 md: 2xl:mx-16">
+                <div className="flex flex-col justify-center mx-4 mt-4 mb-8 md: 2xl:mx-16">
                   <textarea
                     value={userTextarea}
                     placeholder="輸入些甚麼..."
@@ -164,13 +164,13 @@ export default function AccountPasswordChange({ onPageChange }) {
                   <div className="flex justify-end mt-[30px]">
                     <label
                       htmlFor="edit_success_modal"
-                      className="btn w-1/2 min-h-[40px] h-[40px] sm:w-[140px] rounded-full border-dark  btn-primary btn bg-primary hover:bg-primary hover:shadow-xl3 hover:border-primary font-bold"
+                      className="btn w-1/2 min-h-[40px] h-[40px] sm:w-[140px] rounded-full border-dark  btn-primary  bg-primary hover:bg-primary hover:shadow-xl3 hover:border-primary font-bold"
                     >
                       編輯完成
                     </label>
                     <Link
                       href="/account-center/account-index"
-                      className="btn w-1/2 min-h-[40px] h-[40px] sm:w-[140px] sm:ml-4  rounded-full btn btn-outline bg-dark btn-md hover:bg-dark text-primary hover:text-primary hover:shadow-xl3 hover:border-dark"
+                      className="btn w-1/2 min-h-[40px] h-[40px] sm:w-[140px] sm:ml-4  rounded-full  btn-outline bg-dark btn-md hover:bg-dark text-primary hover:text-primary hover:shadow-xl3 hover:border-dark"
                     >
                       取消編輯
                     </Link>
@@ -185,5 +185,5 @@ export default function AccountPasswordChange({ onPageChange }) {
         </div>
       </div>
     </>
-    
+  );
 }

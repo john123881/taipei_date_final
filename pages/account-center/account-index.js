@@ -218,7 +218,7 @@ export default function AccountIndex({ onPageChange }) {
               <div className="mt-4 text-xl ms-2 text-light menu-title">
                 關於我：
               </div>
-              <div className="flex justify-center mx-4 mt-4 mb-8 md:mx-12 2xl:mx-16 md:flex-row">
+              <div className="flex justify-center mx-4 mt-4 mb-8 2xl:mx-16 md:flex-row">
                 <textarea
                   value={userInf.profile}
                   readOnly

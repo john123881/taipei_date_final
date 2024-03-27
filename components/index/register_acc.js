@@ -42,7 +42,7 @@ export default function RegisterAcc() {
               <>
                 {/* LeftSide */}
                 <div
-                  class={`flex flex-col w-full md:w-1/2 my-10 duration-500 ${
+                  class={`flex flex-col w-full md:w-1/2 my-10 duration-1000  ${
                     loginToggle ? '' : ' translate-x-[100%] '
                   } `}
                 >
@@ -101,7 +101,7 @@ export default function RegisterAcc() {
                         type="submit"
                         class="w-full px-4 py-2 mt-6
                      text-primary font-semibold
-                      border-primary border-2 font-bold 
+                      border-primary border-2 
                       text-center rounded-full transition duration-200 ease-in
                        bg-black  hover:shadow-xl3  focus:outline-none focus:ring-2"
                       >
@@ -140,7 +140,7 @@ export default function RegisterAcc() {
               <>
                 {/* RightSide */}
                 <div
-                  class={`flex flex-col  w-full md:translate-y-[0%] md:w-1/2 my-10 duration-500 ${
+                  class={`flex flex-col  w-full md:translate-y-[0%] md:w-1/2 my-10 duration-1000  ${
                     loginToggle ? '' : 'translate-x-[0%] md:translate-x-[100%] '
                   } `}
                 >
@@ -216,7 +216,7 @@ export default function RegisterAcc() {
                         type="submit"
                         class="w-full px-4 py-2 mt-6
                      text-primary font-semibold
-                      border-primary border-2 font-bold 
+                      border-primary border-2  
                       text-center rounded-full transition duration-200 ease-in
                        bg-black  hover:shadow-xl3  focus:outline-none focus:ring-2"
                       >
@@ -258,9 +258,9 @@ export default function RegisterAcc() {
               style={{ backgroundImage: 'url(/loginBackground.png)' }}
               class={`${
                 loginToggle
-                  ? 'duration-500 py-10'
-                  : 'translate-x-[-101%] duration-500 py-[88px]'
-              } w-1/2 absolute right-0 h-full bg-cover rounded-3xl items-center p-4 text-center hidden md:block z-20 `}
+                  ? 'py-10 rounded-l-[100px]'
+                  : 'translate-x-[-101%] py-[88px] rounded-r-[100px]'
+              } duration-1000  w-1/2 absolute right-0 h-full bg-cover  items-center p-4 text-center hidden md:block z-20 `}
             >
               <div className="flex flex-col items-center justify-center ">
                 <div className="font-bold text-h1 text-dark">
@@ -271,7 +271,7 @@ export default function RegisterAcc() {
                 </div>
                 <button
                   onClick={toggleHandler}
-                  className="py-2 px-4 font-bold mt-10 max-w-[180px] rounded-xl text-black w-full border-2 rounded-full  md:py-2 btn-primary bg-primary border-dark hover:shadow-xl3"
+                  className="py-2 px-4 font-bold mt-10 max-w-[180px] rounded-xl text-black w-full border-2   md:py-2 btn-primary bg-primary border-dark hover:shadow-xl3"
                 >
                   {`${loginToggle ? '會員註冊' : '會員登入'} `}
                 </button>
